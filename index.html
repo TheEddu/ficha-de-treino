@@ -1,107 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ficha de Exercícios</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Treino Full Body - 5 Dias</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="bg-gradient-to-br from-cyan-100 to-pink-100 min-h-screen font-sans">
+<body>
+    <header>
+        <h1>Ficha de Treino Full Body - 5 Dias/Semana</h1>
+        <p>Treinos de Segunda a Sexta</p>
+        <img src="https://image.lexica.art/full_webp/2d3db793-841d-45ea-b3ba-1843df9bd692" alt="halteres" class="logo"/>
+    </header>
 
-  <!-- Cabeçalho -->
-  <header class="flex flex-col items-center text-center px-6 py-8">
-    <h1 class="text-4xl font-extrabold text-gray-800 mb-4">Ficha de Exercícios</h1>
-    <img src="./images/logo.png" alt="halteres" class="w-40 h-40 rounded-full shadow-lg" />
-  </header>
+    <main id="treino-container">
+        <!-- Dias e cards aqui -->
+    </main>
 
-  <!-- Sessão de Exercícios -->
-  <section class="px-6 mt-10">
-    <!-- <h2 class="text-2xl font-semibold text-gray-700 mb-8 text-center">Exercícios</h2> -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Card 1 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://treinomestre.com.br/wp-content/uploads/2024/09/flexao-e-extensao-de-punho-com-barra-e-halteres-antebraco.jpg" alt="" class="object-cover h-full w-full">
+    <template id="exercise-card-template">
+        <div class="exercise-card">
+            <div class="card-header">
+                <h3 class="exercise-name"></h3>
+            </div>
+
+            <!-- Carrossel de imagens -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Slides -->
+                </div>
+                <button class="carousel-prev">‹</button>
+                <button class="carousel-next">›</button>
+                <div class="carousel-dots">
+                    <!-- Pontos -->
+                </div>
+            </div>
+
+            <!-- Informações + Instruções -->
+            <div class="expandable-section collapsed">
+                <div class="expandable-header">
+                    <span>Detalhes do Exercício</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="expandable-body">
+                    <div class="info">
+                        <p><strong>Força:</strong> <span class="force"></span></p>
+                        <p><strong>Nível:</strong> <span class="level"></span></p>
+                        <p><strong>Tipo:</strong> <span class="mechanic"></span></p>
+                        <p><strong>Equipamento:</strong> <span class="equipment"></span></p>
+                        <p><strong>Músculos Primários:</strong> <span class="primary-muscles"></span></p>
+                        <p><strong>Músculos Secundários:</strong> <span class="secondary-muscles"></span></p>
+                    </div>
+                    <div class="instructions">
+                        <strong>Instruções:</strong>
+                        <ol class="instructions-list"></ol>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3 class="text-lg font-bold text-gray-800">FLEXÃO DE PUNHO COM HALTERES</h3>
-        <p class="text-sm text-gray-500">Antebraço</p>
-      </div>
+    </template>
 
-      <!-- Card 2 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://treinomestre.com.br/wp-content/uploads/2017/11/cadeira-flexora-musculos-solicitados.jpg" alt="" class="object-cover h-full w-full">
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">CADEIRA FLEXORA</h3>
-        <p class="text-sm text-gray-500">Posterior de Coxa</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://treinomestre.com.br/wp-content/uploads/2023/07/abdominal-infra-paralela.jpg" alt="" class="object-cover h-full w-full">
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">ABDOMINAL INFRA</h3>
-        <p class="text-sm text-gray-500">Abdômen</p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://grandeatleta.com.br/wp-content/uploads/2019/04/elevacao-lateral-para-ombros.jpg" alt="" class="object-cover h-full w-full">
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Elevação Lateral</h3>
-        <p class="text-sm text-gray-500">Ombro (Deltoide Lateral)</p>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://treinomestre.com.br/wp-content/uploads/2017/12/rosca-alternada-no-banco-inclinado.jpg" alt="" class="object-cover h-full w-full">
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Rosca 45º com Halteres</h3>
-        <p class="text-sm text-gray-500">Bíceps</p>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://i.pinimg.com/736x/4f/f3/47/4ff3473687a9765e0e9cf098b1fd67b3.jpg" alt="" class="object-cover h-full w-full">
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Tríceps Corda</h3>
-        <p class="text-sm text-gray-500">Tríceps</p>
-      </div>
-
-      <!-- Card 7 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://treinomestre.com.br/wp-content/uploads/2016/08/cadeira-extensora-execucao-correta.jpg" alt="" class="object-cover h-full w-full">
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Cadeira Extensora</h3>
-        <p class="text-sm text-gray-500">Quadríceps</p>
-      </div>
-
-      <!-- Card 8 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://grandeatleta.com.br/blog/wp-content/uploads/2022/10/puxada-aberta-frente-polia-pulley.jpg" alt="" class="object-cover h-full w-full">
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Pulley Frente</h3>
-        <p class="text-sm text-gray-500">Dorsal (costas) e estabilizadores de ombro</p>
-      </div>
-
-      <!-- Card 9 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform">
-        <div class="bg-gradient-to-t from-green-100 to-blue-100 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <img src="https://treinomestre.com.br/wp-content/uploads/2017/05/crucifixo-em-maquina.jpg" alt="" class="object-cover h-full w-full">
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Crucifixo na Máquina</h3>
-        <p class="text-sm text-gray-500">Peitoral maior</p>
-      </div>
-
-    </div>
-  </section>
-
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
